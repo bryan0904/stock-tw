@@ -1,7 +1,7 @@
 # 建置階段：把 React 編譯成靜態檔
 FROM node:16 AS build
 WORKDIR /app
-COPY package.json package-lock.json ./
+COPY package.json ./
 RUN npm ci
 COPY . .
 RUN npm run build
